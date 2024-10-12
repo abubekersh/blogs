@@ -1,8 +1,8 @@
 <?php
+session_start();
 const BASE_PATH = __DIR__."/../";
 require BASE_PATH.'core/functions.php';
 use core\Router;
-
 
 spl_autoload_register(function ($class){
     $class=strtr($class,"\\","/");
