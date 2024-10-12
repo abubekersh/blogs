@@ -133,10 +133,6 @@ main{
 }
 .see-more{
     color: white;
-    /* position: absolute; */
-    /* position: fixed;
-    top: 50%;
-    left: 50%; */
     top: 500px ;
     z-index: 10000;
 }
@@ -230,7 +226,6 @@ label input{
     }
     h2{
         font-size: 35px;
-        /* margin-top: 16px; */
         text-transform: capitalize;
         color: white;
         text-decoration: underline;
@@ -239,7 +234,6 @@ label input{
     p{
         line-height: 2;
         font-size: 16px;
-        /* color: red; */
     }
     .meta{
         text-align: left;
@@ -280,17 +274,13 @@ label input{
     overflow-x: hidden;
     overflow-y: scroll;
     div:first-of-type{
-        /* padding: 25px; */
         font-size: 20px;
-
         color: white;
-        /* font-size: 2rem; */
         padding: 15px;
         background-color: rgb(39, 38, 38);
     }
     form{
-        /* background-color: transparent;
-         */margin-top: -10px;
+        margin-top: -10px;
     }
     p{
         color: white;
@@ -375,12 +365,8 @@ section{
         border: 2px solid black;
         width: 40%;
         margin: 0 auto;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-around; */
         padding: 20px;
         height: 65vh;
-        /* margin-bottom: 0px; */
     }
     h2{
         color: white;
@@ -391,14 +377,10 @@ section{
     }
     div{
         border-radius: 5px;
-        /* margin-top: 20px; */
-        /* margin-bottom: 20px; */
         margin: 10px auto 45px;
-        /* margin-bottom: 25px; */
         padding: 10px;
         width: 80%;
         background-color: white;
-        /* margin: -22px auto -50px; */
     }
     input{
         outline: none;
@@ -406,7 +388,6 @@ section{
         background-color: transparent;
     }
     button{
-        /* margin: 10px auto 20px; */
         display: block;
         border-radius: 5px;
         padding: 10px;
