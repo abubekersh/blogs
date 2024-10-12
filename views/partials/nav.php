@@ -11,12 +11,19 @@
         <nav>
             <ul>
                 <li><img src="/images/logo.png" alt="" width="30px" height="auto"></li>
-                <li><a href="/">Home</a></li>
+                <li class="<?= uric("/")?"current":"other" ?>"><a href="/">Home</a></li>
                 <?php if($_SERVER['REQUEST_URI']!=='/'):?>
-                <li><a href="/blogs">Blogs</a></li>
-                <li><a href="/about">About</a></li>
+                <?php if($_SESSION):?>
+                <li class="<?= uric("/blogs")?"current":""?>"><a href="/blogs">My Blogs</a></li>
                 <?php endif;?>
-                <li><a href="/socials">My Socials</a></li>
+                <?php endif;?>
+                <li class="<?= uric("/blogs/discover")?"current":""?>"><a href="/blogs/discover">Discover</a></li>
+                <?php if($_SESSION){?>
+                <li class="<?= uric("/session/logout")?"current":""?>"><a href="/session/logout">Logout</a></li>
+                <?php }else{?>
+                <li class="<?= uric("/register")?"current":""?>"><a href="/register">Register</a></li>
+                <li class="<?= uric("/session/login")?"current":""?>"><a href="/session/login">Login</a></li>
+                <?php }?>
             </ul>
         </nav>
     </header>
