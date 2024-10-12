@@ -1,2 +1,2 @@
-<?php 
+<?php
 view('index.view.php');

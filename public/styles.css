@@ -12,6 +12,7 @@
 .blogs{
     width: 50%;
     background-color:black;
+    flex-grow: 1;
     a{
         
         color:white;
@@ -40,6 +41,9 @@
 }
 .container a{
     transition: all 1s ease-in-out;
+}
+.current{
+    background-color: rgb(75, 73, 73);
 }
 nav{
     width: 50%;
@@ -76,16 +80,42 @@ main{
     color:white;
 }
 .post{
+    display: flex;
+    flex-direction: column;
     width:49%;
-    padding: 10px;
+    padding: 25px 10px;
     color:rgb(241, 233, 217);
     margin:5px;
-    background-color: rgb(71, 68, 70);
+    background-color: #050114;
     border: 1px white solid;
     border-radius: 10px;
     max-height:300px ;
     min-height: 300px;
     overflow: hidden;
+}
+.post:last-of-type{
+    flex-grow: 1;
+}
+.post img{
+    width: auto;
+    height: 100px;
+    border-radius: 45px;
+    align-self: flex-end;
+}
+.post h2{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.post h2:hover{
+    text-decoration: underline;
+}
+.arr{
+    transition: margin-left ease-in-out 1s;
+    font-weight: bolder;
+}
+.see-more p:hover + .arr{
+    margin-left: 5px;
+    transition: margin-left ease-in-out 1s;
 }
 .blog{
     display: flex;
@@ -100,6 +130,22 @@ main{
     align-items: center;
     justify-content: center;
     font-size: 30px;
+}
+.see-more{
+    color: white;
+    /* position: absolute; */
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    top: 500px ;
+    z-index: 10000;
+}
+.see-more p{
+    font-size: medium;
+}
+.see-more:visited{
+    color: rgb(97, 116, 109);
+    color: white;
 }
 .canvas{
     background-color: white;
@@ -125,6 +171,7 @@ main{
     width: 100%;
     margin-top: 6px;
     border: 1px black solid;
+    padding: 5px;
 }
 .canvas .blog-body textarea{
     padding: 15px;
@@ -139,5 +186,239 @@ main{
     padding: 6px;
     margin: 8px;
     width: 100px;
+    border: 1px gray solid;
+}
 
+label{
+    color: black;
+    display: block;
+    text-align: left;
+}
+label input#author,select{
+    
+    border: 1px gray solid;
+    outline: none;
+    width: 150px;
+}
+select{
+    padding: 2px;
+
+}
+label input{
+    padding: 5px;
+    outline: none;
+}
+.canvas *{
+    border-radius: 10px;
+    /* border-color: rgb(90, 89, 89); */
+    
+}
+.blog-post{
+    overflow-x: hidden;
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit:cover;
+        border-radius: 20px;
+    }
+    div{
+
+        background-color: rgb(76, 118, 119);
+        background-color: #050114;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 35px;
+        /* margin-top: 16px; */
+        text-transform: capitalize;
+        color: white;
+        text-decoration: underline;
+        margin-bottom: 30px;
+    }
+    p{
+        line-height: 2;
+        font-size: 16px;
+        /* color: red; */
+    }
+    .meta{
+        text-align: left;
+        text-transform: capitalize;
+        color: rgb(45, 21, 58);
+        color: white;
+        button{
+            padding: 10px;
+            text-transform: capitalize;
+            margin-top: 15px;
+            border: 1px white solid;
+            border-radius: 10px;
+            background-color: rgb(216, 205, 205);
+            a{
+                color: rgb(50, 50, 75);
+                text-decoration: none;
+
+            }
+        }
+        button:last-of-type{
+            a{
+
+                color: red;
+            }
+        }
+    }
+}
+.comments{
+    background-color: rgb(228, 223, 223);
+    border: 2px solid black;
+    border-radius: 20px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 0;
+    height: 400px;
+    padding: 5px;
+    width: 50%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    div:first-of-type{
+        /* padding: 25px; */
+        font-size: 20px;
+
+        color: white;
+        /* font-size: 2rem; */
+        padding: 15px;
+        background-color: rgb(39, 38, 38);
+    }
+    form{
+        /* background-color: transparent;
+         */margin-top: -10px;
+    }
+    p{
+        color: white;
+        text-align: left;
+        padding: 15px;
+        background-color: #1a1430;
+        border-bottom:2px solid #000000d8 ;
+        span{
+            font-weight: bold;
+            font-size: 17px;
+            padding: 5px 0;
+        }
+    }
+    p:last-of-type{
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        color: #1a1430;
+    }
+}
+.send{
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+
+}
+.comments textarea{
+    resize: none;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+.comments button{
+    width: 86px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+section{
+    display: flex;
+    background-color: rgb(76, 118, 119);
+    background-color: #050114;
+    border-radius: 20px;
+}
+.other-blogs{
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-grow: 1;
+    background-color: white;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 0;
+    div{
+        background-color: rgb(87, 84, 84);
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+        border: 1px solid white;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(104, 104, 187);
+    }
+    div:first-of-type{
+        background-color: rgb(39, 38, 38);
+        border: none;
+    }
+    background-color: rgb(39, 38, 38);
+}
+.form-container{
+    background-color: rgb(160, 160, 145);
+    width: 100%;
+    padding: 60px;
+    height: 90vh;
+    form{
+        border-radius: 5px;
+        background-color: #4b426b;
+        border: 2px solid black;
+        width: 40%;
+        margin: 0 auto;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-around; */
+        padding: 20px;
+        height: 65vh;
+        /* margin-bottom: 0px; */
+    }
+    h2{
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        justify-self: unset;
+        margin-bottom: 50px;
+    }
+    div{
+        border-radius: 5px;
+        /* margin-top: 20px; */
+        /* margin-bottom: 20px; */
+        margin: 10px auto 45px;
+        /* margin-bottom: 25px; */
+        padding: 10px;
+        width: 80%;
+        background-color: white;
+        /* margin: -22px auto -50px; */
+    }
+    input{
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+    button{
+        /* margin: 10px auto 20px; */
+        display: block;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80%;
+        margin:0 auto;
+        margin-bottom: 20px;
+    }
+    p{
+        font-weight: bold;
+        font-size: medium;
+        color: rgb(202, 122, 122);
+        text-align: center;
+        margin-bottom: 5px;
+    }
 }
